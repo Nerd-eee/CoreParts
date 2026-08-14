@@ -57,7 +57,7 @@ namespace Scripts
             /* BaseDamageCutoff will subtract itself * any cutoff multipliers (see DamageScales.ArmorForCutoff for example) until BaseDamage is depleted. The actual damage it will do is affected by the other damage modifiers.
             * Ie. If BaseDamage is 2000, BaseDamageCutoff is 100, it hits light armor and DamageScales.ArmorForCutoff.Light = 2f, and DamageScales.Armor.Light = 0.1f:
             * Each light armor block can subtract up to 100 * 2 (200) damage from BaseDamage, but will only do 200 * 0.1f (20) damage to each block.
-            * Therefore it will go through 10 blocks of light armor before stopping and deal 20 damage to each.*/
+            * Therefore it will go through 10 blocks of light armor before stopping and deal 20 damage to each. Against other blocks it will go through 20 of them, dealing 100 damage to each.*/
             Mass = 0f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
