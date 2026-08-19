@@ -226,6 +226,10 @@ namespace Scripts
             [ProtoMember(3)] internal double KineticResistance;
             [ProtoMember(4)] internal double EnergeticResistance;
             [ProtoMember(5)] internal int DefinitionPriority;
+            [ProtoMember(6)] internal int MinDamage;
+            [ProtoMember(7)] internal bool IsSacrificialArmor;
+            [ProtoMember(8)] internal int MinDamageSacrificial;
+            [ProtoMember(9)] internal float SacrificialIntegrityThreshold;
         }
 
         [ProtoContract]
